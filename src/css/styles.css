@@ -1,9 +1,201 @@
-.app {
-  display: flex;
-  flex-direction: row;
+body {
+  background-color: #000000;
+  padding: 0px;
+  margin: 0px;
+  font-family: Trebuchet MS;
 }
 
-.listing-block select,
-.store-block select {
-  width: 17em;
+#gradient {
+  width: 100vw;
+  height: 100vh;
+  padding: 3% 0 0 0;
+  margin: 0px;
+}
+
+.head-title {
+  background: black;
+  border-radius: 40px 5px 0px 0px;
+  width: 20vw;
+  height: 7vh;
+  color: white;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.head-subtitle {
+  background: white;
+  border-radius: 0px 0px 40px 5px;
+  width: 20vw;
+  height: 11vh;
+  text-align: center;
+  margin: -3vh auto 0 auto;
+}
+
+
+/*Карусель*/
+
+* {box-sizing:border-box}
+
+.slideshow-container {
+  position: relative;
+  margin: auto;
+  margin-top: 5vh;
+  width: 40vw;
+}
+
+.mySlides {
+    display: none;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: 0px;
+  padding: 16px;
+  color: white;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.text {
+  padding: 8px 12px;
+  width: 40vw;
+  text-align: center;
+  background: white;
+  border-radius: 10px 40px 0px 0px;
+  margin: 0px 0px 0vh 0px;
+}
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 2vh 0 0 2vw;
+  position: absolute;
+  top: 0;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+.mobile-communication {
+  background: black;
+  height: 25vh;
+  border-radius: 0px 0px 10px 40px;
+  text-align: center;
+  color: white; 
+  padding: 10px 0 0 0;
+}
+
+.bank-card {
+  background: black;
+  height: 25vh;
+  border-radius: 0px 0px 10px 40px;
+  text-align: center;
+  color: white; 
+  padding: 10px 0 0 0;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+input {
+  width: 300px;
+	font-size: 13px;
+	padding: 6px 0 4px 10px;
+	border: 1px solid #cecece;
+	background: #F6F6f6;
+	border-radius: 8px;
+}
+
+input.btn-send {
+  margin: 2%;
+}
+
+/*Операторы*/
+
+.mtc {
+  background-image: url(https://sun9-37.userapi.com/c858328/v858328082/11d268/aPTh5auS8Kk.jpg?ava=1);
+  color: black;
+}
+
+.mtc input {
+  background: black;
+  color: white;
+}
+
+.megafon {
+  background-image: url(https://img.rl0.ru/e3e8d9e8041e9c6b0c970d1daea8c38a/c600x315i/www.ferra.ru/images/396/396781.jpg);
+  color: black;
+}
+
+.megafon input {
+  background: black;
+  color: white;
+}
+
+.bilain {
+  background-image: url(https://sun6-16.userapi.com/hdEy4w0Bd6X4LYYQbhM_jHo6fcYnLoI1zswAbg/Aq49cTnS9JQ.jpg?ava=1);
+  color: black;
+}
+
+.tele2 {
+  background-image: url(https://pp.userapi.com/c636730/v636730692/45bb6/vycvCvIN_OA.jpg);
+}
+
+
+/*Банки*/
+
+.visa {
+  background-image: url(https://www.bingotop10.nl/wp-content/uploads/2015/12/Logo-VISA.gif);
+  color: black;
+}
+
+.visa input {
+  background: black;
+  color: white;
+}
+
+.master-card {
+  background-image: url(https://www.muni.com.tw/style/front/images/Mastercard.png);
+}
+
+.american-express {
+  background-image: url(https://hektorcommerce.com/apps/trustbadge/svg_images/?image=flaticon-american-express-logo&color=190130);
 }
