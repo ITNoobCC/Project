@@ -1,40 +1,137 @@
 body {
-  background-color: #000000;
-  padding: 0px;
-  margin: 0px;
-  font-family: Trebuchet MS;
+  background: rgb(211, 211, 211);
+  color: black;
+  font-family: 	Franklin Gothic;
 }
 
-#gradient {
-  width: 100vw;
-  height: 100vh;
-  padding: 3% 0 0 0;
-  margin: 0px;
+.card-block {
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+  height: 40vh;
+  min-width: 600px;
+  min-height: 300px;
+  margin: 10vh auto;
 }
 
-.head-title {
+.bankCardFront {
+  background: rgb(175, 175, 175);
+  color: black;
+  width: 26vw;
+  height: 30vh;
+  min-width: 380px;
+  min-height: 200px;
+  border-radius: 10px;
+  margin: -250px 0 0 130px;
+}
+
+.bankCardBack {
+  background: rgb(153, 153, 153);
+  color: black;
+  width: 26vw;
+  height: 30vh;
+  min-width: 380px;
+  min-height: 200px;
+  border-radius: 10px;
+  margin: 45px 0 0 300px;
+}
+
+.bankCardBackBlackLine {
+  height: 45px;
+  margin-top: 30px;
   background: black;
-  border-radius: 40px 5px 0px 0px;
-  width: 20vw;
-  height: 7vh;
-  color: white;
-  text-align: center;
-  margin: 0 auto;
 }
 
-.head-subtitle {
-  background: white;
-  border-radius: 0px 0px 40px 5px;
-  width: 20vw;
-  height: 11vh;
+.title-head {
   text-align: center;
-  margin: -3vh auto 0 auto;
+}
+
+.card-p {
+  text-align: left;
+  padding-left: 30px;
+}
+
+.card-input {
+  width: 260px;
+  font-family: 	Franklin Gothic;
+  margin: -26px 10px 0px 60px;
+}
+
+.card-input-name {
+  margin: 1px 0 0 60px;
+  width: 310px;
+  font-family: 	Franklin Gothic;
+}
+
+.card-input-cvc {
+  margin: 0px 0 0 260px;
+  width: 100px;
+  font-family: 	Franklin Gothic;
+}
+
+.card-input-p {
+  text-align: left;
+  margin: -10px 10px 0 230px;
+}
+
+.mounthCard {
+  margin: -60px 0 0px 170px;
+  border-radius: 5px;
+  width: 60px;
+  padding-left: 15px;
+  height: 35px;
+}
+
+.yearCard {
+  margin: -60px 0 0px 250px;
+  border-radius: 5px;
+  width: 70px;
+  height: 35px;
+  padding-left: 10px;
+}
+
+.credit-card-icon {
+  width: 25px;
+  height: 25px;
+  margin: 0px 0 0 30px;
+}
+
+.calendar-icon {
+  width: 25px;
+  height: 25px;
+  margin: -40px 0 0 140px;
+}
+
+.person-icon {
+  width: 25px;
+  height: 25px;
+  margin: -27px 0 0 30px;
+}
+
+.cvc-icon {
+  width: 25px;
+  height: 25px;
+  margin: 10px 0 -25px 230px;
+}
+
+.visa-icon {
+  width: 60px;
+  height: 50px;
+  margin: 0 0 -15px 260px;
+}
+
+.master-card {
+  width: 50px;
+  height: 50px;
+  margin: -55px 0 20px 325px;
 }
 
 
 /*Карусель*/
 
-* {box-sizing:border-box}
+* {
+  box-sizing: border-box;
+}
 
 .slideshow-container {
   position: relative;
@@ -44,10 +141,11 @@ body {
 }
 
 .mySlides {
-    display: none;
+  display: none;
 }
 
-.prev, .next {
+.prev,
+.next {
   cursor: pointer;
   position: absolute;
   top: 50%;
@@ -64,8 +162,9 @@ body {
   border-radius: 3px 0 0 3px;
 }
 
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .text {
@@ -96,7 +195,8 @@ body {
   transition: background-color 0.6s ease;
 }
 
-.active, .dot:hover {
+.active,
+.dot:hover {
   background-color: #717171;
 }
 
@@ -107,95 +207,29 @@ body {
   animation-duration: 1.5s;
 }
 
-.mobile-communication {
-  background: black;
-  height: 25vh;
-  border-radius: 0px 0px 10px 40px;
-  text-align: center;
-  color: white; 
-  padding: 10px 0 0 0;
-}
-
-.bank-card {
-  background: black;
-  height: 25vh;
-  border-radius: 0px 0px 10px 40px;
-  text-align: center;
-  color: white; 
-  padding: 10px 0 0 0;
-}
-
 @-webkit-keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 input {
   width: 300px;
-	font-size: 13px;
-	padding: 6px 0 4px 10px;
-	border: 1px solid #cecece;
-	background: #F6F6f6;
-	border-radius: 8px;
-}
-
-input.btn-send {
-  margin: 2%;
-}
-
-/*Операторы*/
-
-.mtc {
-  background-image: url(https://sun9-37.userapi.com/c858328/v858328082/11d268/aPTh5auS8Kk.jpg?ava=1);
-  color: black;
-}
-
-.mtc input {
-  background: black;
-  color: white;
-}
-
-.megafon {
-  background-image: url(https://img.rl0.ru/e3e8d9e8041e9c6b0c970d1daea8c38a/c600x315i/www.ferra.ru/images/396/396781.jpg);
-  color: black;
-}
-
-.megafon input {
-  background: black;
-  color: white;
-}
-
-.bilain {
-  background-image: url(https://sun6-16.userapi.com/hdEy4w0Bd6X4LYYQbhM_jHo6fcYnLoI1zswAbg/Aq49cTnS9JQ.jpg?ava=1);
-  color: black;
-}
-
-.tele2 {
-  background-image: url(https://pp.userapi.com/c636730/v636730692/45bb6/vycvCvIN_OA.jpg);
-}
-
-
-/*Банки*/
-
-.visa {
-  background-image: url(https://www.bingotop10.nl/wp-content/uploads/2015/12/Logo-VISA.gif);
-  color: black;
-}
-
-.visa input {
-  background: black;
-  color: white;
-}
-
-.master-card {
-  background-image: url(https://www.muni.com.tw/style/front/images/Mastercard.png);
-}
-
-.american-express {
-  background-image: url(https://hektorcommerce.com/apps/trustbadge/svg_images/?image=flaticon-american-express-logo&color=190130);
+  font-size: 13px;
+  padding: 6px 0 4px 10px;
+  border: 1px solid #cecece;
+  background: #f6f6f6;
+  border-radius: 8px;
 }
