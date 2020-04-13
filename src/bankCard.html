@@ -1,27 +1,36 @@
 ﻿<html lang="en">
   <head>
-    <title>Project</title>
+    <title>ОПЛАТА КАРТОЙ</title>
     <link rel="stylesheet" href="css/styles.css" />
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
   </head>
   <body>
+    <div class="menu">
+      <div class="btnMobileLink">
+        <a href="mobile.html"><span class="linkMobileStyle">ОПЛАТА С ПОМОЩЬЮ ТЕЛЕФОНА</span></a>
+      </div>
+      <div class="btnBankLink">
+        <a href="bankCard.html"><span class ="linkBankStyle">ОПЛАТА С ПОМОЩЬЮ КАРТЫ</span></a>
+      </div>
+    </div>
     <div class="card-block">
       <h1 class="title-head">Банковская карта</h1>
       <div class="bankCardBack">
         <div class = "bankCardBackBlackLine"></div>
-        <img src="image/cvc-icon.png" class = "cvc-icon" />
-        <input class="card-input-cvc" placeholder="123" type="password" required maxlength="3" type="number"/>
+        <img src="image/cvc-icon2.png" class = "cvc-icon" />
+        <input class="card-input-cvc" placeholder="123" type="number" required maxlength="3" id="input-cvc" maxlength = "3"/>
         <div class="card-input-p">
           <p>Введите последние 3 цифры с обратной стороны карты</p>
         </div>
       </div>
       <div class="bankCardFront">
         <p class="card-p">ВВЕДИТЕ ДАННЫЕ КАРТЫ ДЛЯ ОПЛАТЫ</p>
-        <img src="image/credit-card-icon.png" class = "credit-card-icon" />
+        <img src="image/credit-card-icon2.png" class = "credit-card-icon" />
         <img src="image/visa.png" class = "visa-icon" />
-        <input class="card-input" placeholder="1245678901234567" required type="number"/>
+        <!--<input class="card-input" placeholder="1245678901234567" required type="number" id="input-numberCard" />-->
+        <input class="card-input" placeholder="1245678901234567" required id="input-numberCard" type = "number" maxlength = "16" />
         <p class= "card-p">СРОК<br> ДЕЙСТВИЯ</p>
-        <img src="image/calendar-icon.png" class = "calendar-icon" />
+        <img src="image/calendar-icon2.png" class = "calendar-icon" />
         <img src="image/master-card.png" class = "master-card" />
         <select size="1" class="mounthCard">
           <option selected value="1">1</option>
@@ -61,12 +70,13 @@
           <option value="2019">2019</option>
           <option selected value="2020">2020</option>
          </select>
-         <input class="card-input-name" placeholder="Имя Фамилия" required  maxlength="40"/>
-         <img src="image/person-icon.png" class = "person-icon" />
+         <input class="card-input-name" placeholder="Имя Фамилия" required  maxlength="40" id="input-name"/>
+         <img src="image/person-icon2.png" class = "person-icon" />
       </div>
     </div>
+    <input type="button" id = "btnSend" value="Send" class="btnSend"/>
+    
 
     <script src="js/main.js"></script>
-    <script src="js/carousel.js"></script>
   </body>
 </html>

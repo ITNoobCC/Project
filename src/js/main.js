@@ -1,5 +1,5 @@
 'use strict';
-window.onload = function() {
+/*window.onload = function() {
   var mobile = document.getElementById('mobileCommunication');
   var bank = document.getElementById('bankCard');
   var sendMobile = document.getElementById('sendMobile');
@@ -116,4 +116,88 @@ window.onload = function() {
       bankBlock.classList.remove('visa');
     }
   };
+};*/
+window.onload = function () {
+  var sendBank = document.getElementById('btnSend');
+  var inputNumberCard = document.getElementById('input-numberCard');
+  var inputName = document.getElementById('input-name');
+  var inputCvc = document.getElementById('input-cvc');
+  var phone = document.getElementById('phone');
+
+  let errorNumberCard = document.createElement('div');
+  let errorNameCard = document.createElement('div');
+  let errorCvcCard = document.createElement('div');
+
+  inputNumberCard.oninput = function () {
+    if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);
+    errorNumberCard.className = 'errorMessage';
+    if (inputNumberCard.value === '') {
+      errorNumberCard.innerHTML = '<h4>Номер карты не заполнен!</h4>';
+    } else if (inputNumberCard.value.length < 16) {
+      errorNumberCard.innerHTML = '<h4>Номер карты не должен быть меньше 16!</h4>';
+    }
+    else {
+      errorNumberCard.innerHTML = '<h4 class="messgaeGood">Номер карты заполен верно!</h4>';
+    }
+  }
+  function validationName() {
+    var flagEnter = 0;
+    var flagNumber = 0;
+    errorNameCard.className = 'errorMessage';
+    for (var i = 0; i < inputName.value.length; i++) {
+      if (inputName.value[i] === ' ') {
+        flagEnter++;
+      }
+      if (inputName.value[i] === '0' || inputName.value[i] === '1' || inputName.value[i] === '2' || inputName.value[i] === '3' || inputName.value[i] === '4' || inputName.value[i] === '5' || inputName.value[i] === '6' || inputName.value[i] === '7' || inputName.value[i] === '8' || inputName.value[i] === '9') {
+        flagNumber++;
+      }
+    }
+    if (flagEnter > 1 || flagEnter === 0) {
+      errorNameCard.innerHTML = '<h4>Имя пользователя заполнено не верно!</h4>'
+    }
+    else {
+      errorNameCard.innerHTML = '<h4 class="messgaeGood">Имя пользователя заполнено верно!</h4>'
+    }
+    if (flagNumber !== 0) {
+      errorNameCard.innerHTML = '<h4>Имя не должно содержать цифры!</h4>'
+    }
+  }
+
+  inputName.oninput = function () {
+    this.value = this.value.toUpperCase();
+    errorNameCard.className = 'errorMessage';
+    if (inputName.value === '') {
+      errorNameCard.innerHTML = '<h4>Имя пользователя не заполнено!</h4>'
+    }
+    else if (inputName.value.length < 6) {
+      errorNameCard.innerHTML = '<h4>Имя пользователя слишком короткое!</h4>'
+    }
+  }
+
+  inputCvc.oninput = function () {
+    if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);
+    errorCvcCard.className = 'errorMessage';
+    if (inputCvc.value === '') {
+      errorCvcCard.innerHTML = '<h4>CVC карты не заполнен!</h4>';
+    } else if (inputCvc.value.length < 3) {
+      errorCvcCard.innerHTML = '<h4>CVC должен состоять из 3 цифр!</h4>';
+    }
+    else {
+      errorCvcCard.innerHTML = '<h4 class="messgaeGood">CVC заполнено верно!</h4>';
+    }
+  }
+
+  sendBank.onclick = function () {
+    inputName.value = inputName.value.replace(/\s+/g, ' ').trim();
+    validationName();
+    document.body.append(errorNumberCard);
+    document.body.append(errorNameCard);
+    document.body.append(errorCvcCard);
+  }
+
+  phone.oninput = function() {
+    phone.value[0] = '+';
+    phone.value[1] = '7';
+    console.log(phone.value);
+  }
 };

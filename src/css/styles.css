@@ -1,8 +1,75 @@
 body {
-  background: rgb(211, 211, 211);
+  background: rgb(121, 121, 121);
   color: black;
   font-family: 	Franklin Gothic;
 }
+
+.menu {
+  width: 100%;
+  height: 100px;
+  margin: 20px 0 0 0;
+}
+
+.btnMobileLink {
+  width: 30%;
+  height: 35px;
+  float: left;
+  text-align: center;
+  background: rgb(37, 37, 37);
+  border-radius: 40px 10px 10px 40px;
+  margin: 0 0 0 20%;
+  padding: 15px 0 0 0;
+}
+
+.btnBankLink {
+  width: 30%;
+  height: 35px;
+  float: right;
+  text-align: center;
+  background: rgb(37, 37, 37);
+  border-radius: 10px 40px 40px 10px;
+  margin: 0 20% 0 0;
+  padding: 15px 0 0 0;
+}
+
+.linkMobileStyle { 
+  display: block; 
+  height: 35px; 
+  border-radius: 10px 40px 40px 10px;
+}
+.btnBankLink:hover {
+  background: rgb(45, 45, 45);
+}
+
+.linkBankStyle { 
+  display: block; 
+  height: 35px; 
+  border-radius: 40px 10px 10px 40px;
+}
+.btnMobileLink:hover {
+  background: rgb(45, 45, 45);
+}
+
+a:link {
+  color: #497DDD; 
+  border-bottom: 1px dashed; 
+  text-decoration: none;
+}
+a:visited {
+  color:white;
+  text-decoration: none;
+}
+a:hover {
+  color: #c5e703; 
+  border-bottom: .07em solid;
+  text-decoration: none;
+}
+a:active {
+  color: #497DDD; 
+  border-bottom: 1px dashed;
+  text-decoration: none;
+}
+
 
 .card-block {
   display: flex;
@@ -15,35 +82,40 @@ body {
 }
 
 .bankCardFront {
-  background: rgb(175, 175, 175);
-  color: black;
+  background: rgb(37, 37, 37);
+  color: white;
   width: 26vw;
   height: 30vh;
   min-width: 380px;
   min-height: 200px;
   border-radius: 10px;
-  margin: -250px 0 0 130px;
+  margin: -250px 0 0 100px;
 }
 
 .bankCardBack {
-  background: rgb(153, 153, 153);
-  color: black;
+  background: rgb(19, 19, 19);
+  color: white;
   width: 26vw;
   height: 30vh;
   min-width: 380px;
   min-height: 200px;
   border-radius: 10px;
-  margin: 45px 0 0 300px;
+  margin: 45px 0 0 270px;
 }
 
 .bankCardBackBlackLine {
   height: 45px;
   margin-top: 30px;
-  background: black;
+  background: rgb(173, 173, 173);
 }
 
 .title-head {
   text-align: center;
+  background: rgb(37, 37, 37);
+  color: white;
+  border-radius: 10px 10px;
+  width: 400px;
+  margin: 0 auto 20px auto;
 }
 
 .card-p {
@@ -127,104 +199,6 @@ body {
 }
 
 
-/*Карусель*/
-
-* {
-  box-sizing: border-box;
-}
-
-.slideshow-container {
-  position: relative;
-  margin: auto;
-  margin-top: 5vh;
-  width: 40vw;
-}
-
-.mySlides {
-  display: none;
-}
-
-.prev,
-.next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: 0px;
-  padding: 16px;
-  color: white;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-}
-
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-.prev:hover,
-.next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-.text {
-  padding: 8px 12px;
-  width: 40vw;
-  text-align: center;
-  background: white;
-  border-radius: 10px 40px 0px 0px;
-  margin: 0px 0px 0vh 0px;
-}
-
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 2vh 0 0 2vw;
-  position: absolute;
-  top: 0;
-}
-
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.active,
-.dot:hover {
-  background-color: #717171;
-}
-
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-  from {
-    opacity: 0.4;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fade {
-  from {
-    opacity: 0.4;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
 input {
   width: 300px;
   font-size: 13px;
@@ -232,4 +206,44 @@ input {
   border: 1px solid #cecece;
   background: #f6f6f6;
   border-radius: 8px;
+}
+
+.btnSend {
+  margin: 0 0 0 45%;
+  background: rgb(37, 37, 37);
+  color: white;
+  width: 150px;
+}
+
+.errorMessage {
+  width: 100%;
+  margin: 0 auto;
+  height: 50px;
+  text-align: center;
+  color: red;
+}
+
+.messgaeGood {
+  color: green;
+}
+
+.mobileBlock{
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+  height: 40vh;
+  min-width: 600px;
+  min-height: 300px;
+  margin: 10vh auto;
+}
+
+.mobileCardBlock {
+  background: rgb(37, 37, 37);
+  color: white;
+  width: 27vw;
+  height: 30vh;
+  min-width: 380px;
+  min-height: 200px;
+  border-radius: 10px;
+  margin: 10px auto;
 }
