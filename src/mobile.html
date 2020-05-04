@@ -15,13 +15,16 @@
     </div>
     <div class="mobileBlock">
       <h1 class="title-head">Мобильная связь</h1>
-      <div class="mobileCardBlock">
-        <input type="tel" id="phone" name="phone" placeholder="+7(___)___-__-__">
+      <div class="mobileCardBlock" id="mobileBlock">
+        <h2 class = "phoneOperator" id="operatorMobile">ОПЕРАТОР</h2>
+        <input type="tel" id="phone" name="phone" placeholder="+7(999)999-999-99" class="phone">
       </div>
     </div>
     <input type="button" id = "btnSend" value="Send" class="btnSend"/>
     
 
-    <script src="js/main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
+    <script src="js/phone.js"></script>
   </body>
 </html>

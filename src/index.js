@@ -1,2 +1,3 @@
 import './css/styles.css';
-import './js/main';
+import './js/bankCard';
+import './js/phone';

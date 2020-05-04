@@ -122,7 +122,7 @@ window.onload = function () {
   var inputNumberCard = document.getElementById('input-numberCard');
   var inputName = document.getElementById('input-name');
   var inputCvc = document.getElementById('input-cvc');
-  var phone = document.getElementById('phone');
+  var phoneNumber = document.getElementById('phone');
 
   let errorNumberCard = document.createElement('div');
   let errorNameCard = document.createElement('div');
@@ -139,7 +139,8 @@ window.onload = function () {
     else {
       errorNumberCard.innerHTML = '<h4 class="messgaeGood">Номер карты заполен верно!</h4>';
     }
-  }
+  };
+
   function validationName() {
     var flagEnter = 0;
     var flagNumber = 0;
@@ -161,7 +162,7 @@ window.onload = function () {
     if (flagNumber !== 0) {
       errorNameCard.innerHTML = '<h4>Имя не должно содержать цифры!</h4>'
     }
-  }
+  };
 
   inputName.oninput = function () {
     this.value = this.value.toUpperCase();
@@ -172,7 +173,7 @@ window.onload = function () {
     else if (inputName.value.length < 6) {
       errorNameCard.innerHTML = '<h4>Имя пользователя слишком короткое!</h4>'
     }
-  }
+  };
 
   inputCvc.oninput = function () {
     if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);
@@ -185,7 +186,7 @@ window.onload = function () {
     else {
       errorCvcCard.innerHTML = '<h4 class="messgaeGood">CVC заполнено верно!</h4>';
     }
-  }
+  };
 
   sendBank.onclick = function () {
     inputName.value = inputName.value.replace(/\s+/g, ' ').trim();
@@ -193,11 +194,11 @@ window.onload = function () {
     document.body.append(errorNumberCard);
     document.body.append(errorNameCard);
     document.body.append(errorCvcCard);
-  }
+  };
 
-  phone.oninput = function() {
-    phone.value[0] = '+';
-    phone.value[1] = '7';
-    console.log(phone.value);
-  }
+  phoneNumber.oninput = function() {
+    //phoneNumber.value[0] = '+';
+    //phoneNumber.value[1] = '7';
+    console.log(phoneNumber.value);
+  };
 };

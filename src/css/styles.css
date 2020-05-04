@@ -1,7 +1,7 @@
 body {
-  background: rgb(121, 121, 121);
   color: black;
   font-family: 	Franklin Gothic;
+  background-image: url(../image/background.jpg);
 }
 
 .menu {
@@ -75,7 +75,7 @@ a:active {
   display: flex;
   flex-direction: column;
   width: 50vw;
-  height: 40vh;
+  height: 100px;
   min-width: 600px;
   min-height: 300px;
   margin: 10vh auto;
@@ -84,10 +84,12 @@ a:active {
 .bankCardFront {
   background: rgb(37, 37, 37);
   color: white;
-  width: 26vw;
-  height: 30vh;
-  min-width: 380px;
-  min-height: 200px;
+  width: 410px;
+  height: 220px;
+  min-width: 410px;
+  min-height: 220px;
+  max-width: 410px;
+  max-height: 220px;
   border-radius: 10px;
   margin: -250px 0 0 100px;
 }
@@ -95,10 +97,12 @@ a:active {
 .bankCardBack {
   background: rgb(19, 19, 19);
   color: white;
-  width: 26vw;
-  height: 30vh;
-  min-width: 380px;
-  min-height: 200px;
+  width: 410px;
+  height: 220px;
+  min-width: 410px;
+  min-height: 220px;
+  max-width: 410px;
+  max-height: 220px;
   border-radius: 10px;
   margin: 45px 0 0 270px;
 }
@@ -136,14 +140,14 @@ a:active {
 }
 
 .card-input-cvc {
-  margin: 0px 0 0 260px;
+  margin: 0px 0 0 290px;
   width: 100px;
   font-family: 	Franklin Gothic;
 }
 
 .card-input-p {
   text-align: left;
-  margin: -10px 10px 0 230px;
+  margin: -10px 10px 0 250px;
 }
 
 .mounthCard {
@@ -183,7 +187,7 @@ a:active {
 .cvc-icon {
   width: 25px;
   height: 25px;
-  margin: 10px 0 -25px 230px;
+  margin: 10px 0 -25px 250px;
 }
 
 .visa-icon {
@@ -216,34 +220,70 @@ input {
 }
 
 .errorMessage {
-  width: 100%;
+  width: 400px;
   margin: 0 auto;
-  height: 50px;
+  height: 20px;
   text-align: center;
-  color: red;
+  color: black;
+  background: rgb(231, 147, 147);
+  border-radius: 40px;
 }
 
 .messgaeGood {
-  color: green;
+  width: 400px;
+  height: 20px;
+  color: black;
+  background: rgb(171, 231, 147);
+  border-radius: 40px;
 }
 
 .mobileBlock{
   display: flex;
   flex-direction: column;
   width: 50vw;
-  height: 40vh;
+  height: 220px;
   min-width: 600px;
-  min-height: 300px;
+  min-height: 220px;
   margin: 10vh auto;
 }
 
 .mobileCardBlock {
   background: rgb(37, 37, 37);
   color: white;
-  width: 27vw;
-  height: 30vh;
-  min-width: 380px;
-  min-height: 200px;
+  width: 410px;
+  height: 220px;
+  min-width: 410px;
+  min-height: 220px;
+  max-width: 410px;
+  max-height: 220px;
   border-radius: 10px;
-  margin: 10px auto;
+  margin: 0 auto;
+}
+
+.phone {
+  margin: 25px 0 0 55px;
+}
+
+.phoneOperator {
+  text-align: center;
+}
+
+.operatorMTC {
+  background-image: url(../image/MTC.png);
+  background-size: cover;
+}
+
+.operatorMEGAFON {
+  background-image: url(../image/МЕГАФОН.png);
+  background-size: cover;
+}
+
+.operatorBILAIN {
+  background-image: url(../image/БИЛАЙН.png);
+  background-size: cover;
+}
+
+.operatorTELE2 {
+  background-image: url(../image/ТЕЛЕ2.png);
+  background-size: cover;
 }
