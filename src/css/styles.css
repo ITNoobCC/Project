@@ -1,6 +1,6 @@
 body {
   color: black;
-  font-family: 	Franklin Gothic;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   background-image: url(../image/background.jpg);
 }
 
@@ -32,44 +32,48 @@ body {
   padding: 15px 0 0 0;
 }
 
-.linkMobileStyle { 
-  display: block; 
-  height: 35px; 
+.linkMobileStyle {
+  display: block;
+  height: 35px;
   border-radius: 10px 40px 40px 10px;
 }
+
 .btnBankLink:hover {
   background: rgb(45, 45, 45);
 }
 
-.linkBankStyle { 
-  display: block; 
-  height: 35px; 
+.linkBankStyle {
+  display: block;
+  height: 35px;
   border-radius: 40px 10px 10px 40px;
 }
+
 .btnMobileLink:hover {
   background: rgb(45, 45, 45);
 }
 
 a:link {
-  color: #497DDD; 
-  border-bottom: 1px dashed; 
-  text-decoration: none;
-}
-a:visited {
-  color:white;
-  text-decoration: none;
-}
-a:hover {
-  color: #c5e703; 
-  border-bottom: .07em solid;
-  text-decoration: none;
-}
-a:active {
-  color: #497DDD; 
+  color: #497ddd;
   border-bottom: 1px dashed;
   text-decoration: none;
 }
 
+a:visited {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #c5e703;
+  border-bottom: 0.07em solid;
+  text-decoration: none;
+}
+
+a:active {
+  color: #497ddd;
+  border-bottom: 1px dashed;
+  text-decoration: none;
+}
 
 .card-block {
   display: flex;
@@ -129,20 +133,20 @@ a:active {
 
 .card-input {
   width: 260px;
-  font-family: 	Franklin Gothic;
-  margin: -26px 10px 0px 60px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin: -26px 10px 0 60px;
 }
 
 .card-input-name {
   margin: 1px 0 0 60px;
   width: 310px;
-  font-family: 	Franklin Gothic;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 .card-input-cvc {
-  margin: 0px 0 0 290px;
+  margin: 0 0 0 290px;
   width: 100px;
-  font-family: 	Franklin Gothic;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 .card-input-p {
@@ -151,7 +155,7 @@ a:active {
 }
 
 .mounthCard {
-  margin: -60px 0 0px 170px;
+  margin: -60px 0 0 170px;
   border-radius: 5px;
   width: 60px;
   padding-left: 15px;
@@ -159,7 +163,7 @@ a:active {
 }
 
 .yearCard {
-  margin: -60px 0 0px 250px;
+  margin: -60px 0 0 250px;
   border-radius: 5px;
   width: 70px;
   height: 35px;
@@ -169,7 +173,7 @@ a:active {
 .credit-card-icon {
   width: 25px;
   height: 25px;
-  margin: 0px 0 0 30px;
+  margin: 0 0 0 30px;
 }
 
 .calendar-icon {
@@ -202,7 +206,6 @@ a:active {
   margin: -55px 0 20px 325px;
 }
 
-
 input {
   width: 300px;
   font-size: 13px;
@@ -229,15 +232,11 @@ input {
   border-radius: 40px;
 }
 
-.messgaeGood {
-  width: 400px;
-  height: 20px;
-  color: black;
-  background: rgb(171, 231, 147);
-  border-radius: 40px;
+.errorBorderRed {
+  border: 1px solid red;
 }
 
-.mobileBlock{
+.mobileBlock {
   display: flex;
   flex-direction: column;
   width: 50vw;
@@ -274,16 +273,95 @@ input {
 }
 
 .operatorMEGAFON {
-  background-image: url(../image/МЕГАФОН.png);
+  background-image: url(../image/megafon.png);
   background-size: cover;
 }
 
 .operatorBILAIN {
-  background-image: url(../image/БИЛАЙН.png);
+  background-image: url(../image/bilain.png);
   background-size: cover;
 }
 
 .operatorTELE2 {
-  background-image: url(../image/ТЕЛЕ2.png);
+  background-image: url(../image/tele2.png);
   background-size: cover;
+}
+
+.carousel-wrapper {
+  height: 400px;
+  position: relative;
+  width: 800px;
+  margin: 80px auto;
+}
+
+.carousel-item {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 25px 50px;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.arrow {
+  width: 20px;
+  height: 20px;
+  border-top: 10px solid #6e18c0;
+  border-right: 10px solid #6e18c0;
+  margin-right: 60px;
+}
+
+.arrow-prev {
+  left: 190px;
+  position: absolute;
+  top: 125px;
+  transform: translateY(-50%) rotate(-135deg);
+}
+
+.arrow-next {
+  right: 90px;
+  position: absolute;
+  top: 125px;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.light {
+  color: white;
+}
+
+@media (max-width: 480px) {
+  .arrow,
+  .light .arrow {
+    background-size: 10px;
+    background-position: 10px 50%;
+  }
+}
+
+[id^="item"] {
+  display: none;
+}
+
+.item-1 {
+  z-index: 2;
+  opacity: 1;
+  background-size: cover;
+}
+
+.item-2 {
+  background-size: cover;
+}
+
+*:target ~ .item-1 {
+  opacity: 0;
+}
+
+#item-1:target ~ .item-1 {
+  opacity: 1;
+}
+
+#item-2:target ~ .item-2 {
+  z-index: 2;
+  opacity: 1;
 }
