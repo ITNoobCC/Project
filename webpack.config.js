@@ -6,6 +6,7 @@ const MiniCssExtractPlugin  =  require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const TerserJSPlugin = require('terser-webpack-plugin');
 const HtmlReplaceWebpackPlugin = require('html-replace-webpack-plugin');
+const FileLoader = require('file-loader');
 
 module.exports = {
   optimization: {
@@ -30,6 +31,14 @@ module.exports = {
         }
       },
       {
+        test: /\.(png|jpe?g|gif)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+          },
+        ],
+      },
+      {
         test: /\.css$/,
         use: [
           {
@@ -49,8 +58,12 @@ module.exports = {
       replacement: '<link rel="stylesheet" href="app.min.css">'
     },
     {
-      pattern: '<script src="js/main.js"></script>',
+      pattern: '<script src="js/validation.js"></script>',
       replacement: '<script src="app.min.js"></script>'
+    },
+    {
+      pattern: '<script src="js/libs/jquery.maskedinput.min.js"></script>',
+      replacement: '<script src="../src/js/libs/jquery.maskedinput.min.js"></script>'
     }
     ]),
     new CleanWebpackPlugin(),
